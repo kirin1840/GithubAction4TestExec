@@ -61,7 +61,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run python script
         run: |
-          cd ./samplesuites/testsuite_B_hop/
+          cd ./samplesuites/testsuite_B_step/
           echo Add other actions to exec test.py,
           echo test, and deploy your project.
           cd ~/
@@ -76,7 +76,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run python script
         run: |
-          cd ./samplesuites/testsuite_C_hop/
+          cd ./samplesuites/testsuite_C_any/
           echo Add other actions to exec test.py,
           echo test, and deploy your project.
           cd ~/
