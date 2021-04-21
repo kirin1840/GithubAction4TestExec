@@ -47,11 +47,11 @@ jobs:
       - name: Run python script
         run: |
           cd ./samplesuites/testsuite_A_hop/
-          echo Exec testcaseA.
+          echo Exec testsuite A.
           find . -maxdepth 1 -name "*.py" -exec  python3 {} \;
           cd ~/
                   
-  testBhop:   # This workflow contains a single job called "testB"
+  testBstep:   # This workflow contains a single job called "testB"
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     needs: testAhop
@@ -62,11 +62,11 @@ jobs:
       - name: Run python script
         run: |
           cd ./samplesuites/testsuite_B_step/
-          echo Add other actions to exec test.py,
-          echo test, and deploy your project.
+          echo Exec testsuite B.
+          find . -maxdepth 1 -name "*.py" -exec  python3 {} \;
           cd ~/
           
-  testChop: # This workflow contains a single job called "testC"
+  testCany: # This workflow contains a single job called "testC"
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     needs: build
@@ -77,8 +77,8 @@ jobs:
       - name: Run python script
         run: |
           cd ./samplesuites/testsuite_C_any/
-          echo Add other actions to exec test.py,
-          echo test, and deploy your project.
+          echo Exec testsuite C.
+          find . -maxdepth 1 -name "*.py" -exec  python3 {} \;
           cd ~/
           
           
