@@ -48,7 +48,7 @@ jobs:
         run: |
           cd ./samplesuites/testsuite_A_hop/
           echo Exec testcaseA.
-          python *.py
+          find . -maxdepth 1 -name "*.py" -exec  python3 {} \;
           cd ~/
                   
   testBhop:   # This workflow contains a single job called "testB"
