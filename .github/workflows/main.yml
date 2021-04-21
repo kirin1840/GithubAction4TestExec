@@ -47,8 +47,8 @@ jobs:
       - name: Run python script
         run: |
           cd ./samplesuites/testsuite_A_hop/
-          echo Add other actions to exec test.py,
-          echo test, and deploy your project.
+          echo Exec testcaseA.
+          python *.py
           cd ~/
                   
   testBhop:   # This workflow contains a single job called "testB"
